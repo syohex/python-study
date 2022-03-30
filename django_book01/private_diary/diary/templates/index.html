@@ -1,14 +1,78 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <title>Top Page</title>
-</head>
+{% load static %}
 
-<body>
-  <h1>Hello World!</h1>
-  <h2>Django App</h2>
-</body>
+{% block title %}Diary Service | Private Diary {% endblock %}
 
-</html>
+{% block header %}
+<header class="masthead text-center text-white">
+  <div class="masthead-content">
+    <div class="container">
+      <h1 class="masthead-heading mb-0">Private Diary</h1>
+      <h2 class="masthead-subheading mb-0">Your Diary Service</h2>
+      <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Log In</a>
+    </div>
+  </div>
+  <div class="bg-circle-1 bg-circle"></div>
+  <div class="bg-circle-2 bg-circle"></div>
+  <div class="bg-circle-3 bg-circle"></div>
+  <div class="bg-circle-4 bg-circle"></div>
+</header>
+{% endblock %}
+
+{% block contents %}
+<section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2">
+        <div class="p-5">
+          <img class="img-fluid rounded-circle" src="{% static 'assets/img/01.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4">Web Diary</h2>
+            <p>Diary service, creating, editting, deleting your diaries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="p-5">
+          <img class="img-fluid rounded-circle" src="{% static 'assets/img/02.jpg' %}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-5">
+          <h2 class="display-4">Save Your Diary</h2>
+          <p>Save Your Diary to Web</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="p-5">
+          <img class="img-fluid rounded-circle" src="{% static 'assets/img/03.jpg' %}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="p-5">
+          <h2 class="display-4">Membership System</h2>
+          <p>Membership System Diary Service</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
